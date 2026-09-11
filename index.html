@@ -1,11 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Character Gallery | Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
+    <!-- Navigation: the same on all four pages -->
+    <header class="topbar">
+        <div class="wrap">
+            <a class="brand" href="index.html">Character <span>Gallery</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a class="here" href="index.html">Home</a></li>
+                    <li><a href="details.html">Details</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="new-character-form.html">Add a Character</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrap">
+
+        <div class="page-head">
+            <h1>My Top Five Favorite characters</h1>
+            <p>A small collection of the fictional characters I grew up on, written up
+                like trading cards. Pick any one to open its full profile.</p>
+        </div>
+
+        <!-- Search + filter. No backend and no JavaScript yet, so nothing
+         happens on submit. -->
+        <form class="finder" action="index.html" method="get" role="search">
+            <label class="visually-hidden" for="q">Search by name</label>
+            <input type="search" id="q" name="q" placeholder="Search by name, e.g. Spider-Man">
+
+            <label class="visually-hidden" for="universe">Filter by universe</label>
+            <select id="universe" name="universe">
+                <option value="">Every universe</option>
+                <option value="marvel">Marvel</option>
+                <option value="pandora">Avatar / Pandora</option>
+                <option value="cartoon-network">Cartoon Network</option>
+                <option value="mgm">MGM classics</option>
+            </select>
+
+            <button class="btn" type="submit">Search</button>
+            <p class="note">Searching have no function yet </p>
+        </form>
+        </main>
+
 </body>
+
 </html>

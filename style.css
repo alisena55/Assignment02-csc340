@@ -1,0 +1,173 @@
+
+/* ---- 1. Base ---------------------------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #16343c;
+  color: #eae3d6;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: #e0b45c;
+}
+
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid #e0b45c;
+  outline-offset: 2px;
+}
+
+.wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* ---- 2. Navigation ---------------------------------------- */
+.topbar {
+  background-color: #102a31;
+  border-bottom: 2px solid #c08a2e;
+}
+
+.topbar .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+}
+
+.brand {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.3rem;
+  color: #eae3d6;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+
+.brand span {
+  color: #e0b45c;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #eae3d6;
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover {
+  border-bottom-color: #c08a2e;
+}
+
+.nav-links a.here {
+  color: #e0b45c;
+  border-bottom-color: #e0b45c;
+}
+
+/* ---- 3. Page header --------------------------------------- */
+.page-head {
+  padding: 3rem 0 1.75rem;
+}
+
+.page-head h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: normal;
+  font-size: 2.6rem;
+  line-height: 1.15;
+  margin: 0 0 0.6rem;
+}
+
+.page-head p {
+  margin: 0;
+  max-width: 58ch;
+  color: #c3d2d1;
+}
+
+/* ---- 4. Search row ---------------------------------------- */
+.finder {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding-bottom: 2.25rem;
+}
+
+.finder input {
+  flex: 1 1 260px;
+  min-width: 0;
+}
+
+.finder input,
+.finder select {
+  font: inherit;
+  padding: 0.6rem 0.75rem;
+  color: #1c2a30;
+  background-color: #f3ece0;
+  border: 1px solid #e0d6c2;
+  border-radius: 6px;
+}
+
+.btn {
+  font: inherit;
+  cursor: pointer;
+  padding: 0.6rem 1.4rem;
+  border-radius: 6px;
+  border: 1px solid #c08a2e;
+  background-color: #c08a2e;
+  color: #1c1405;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: #e0b45c;
+}
+
+.btn-quiet {
+  background-color: transparent;
+  color: #e0b45c;
+}
+
+.btn-quiet:hover {
+  background-color: #f0e4cd;
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.note {
+  width: 100%;
+  margin: 0;
+  font-size: 0.9rem;
+  color: #9fb4b3;
+}
