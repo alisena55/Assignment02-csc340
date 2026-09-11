@@ -1,3 +1,4 @@
+
 /*  1. Base  */
 * {
   box-sizing: border-box;
@@ -36,7 +37,7 @@ textarea:focus {
   padding: 0 1.25rem;
 }
 
-/*  2. Navigation  */
+/* 2. Navigation  */
 .topbar {
   background-color: #102a31;
   border-bottom: 2px solid #c08a2e;
@@ -89,7 +90,7 @@ textarea:focus {
   border-bottom-color: #e0b45c;
 }
 
-/*  3. Page header  */
+/*  3. Page header */
 .page-head {
   padding: 3rem 0 1.75rem;
 }
@@ -108,7 +109,7 @@ textarea:focus {
   color: #c3d2d1;
 }
 
-/*  4. Search row */
+/*  4. Search row  */
 .finder {
   display: flex;
   flex-wrap: wrap;
@@ -171,7 +172,14 @@ textarea:focus {
   color: #9fb4b3;
 }
 
-/*  5. Cards  */
+/*  5. Gallery and cards  */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+  gap: 1.5rem;
+  padding-bottom: 3.5rem;
+}
+
 .card {
   background-color: #f3ece0;
   color: #1c2a30;
@@ -195,11 +203,9 @@ textarea:focus {
   border-bottom: 1px solid #e0d6c2;
 }
 
-/*Adjust iron man pic*/
-card img[src*="iron-man"] {
-  transform: 3px;
+.card img[src*="iron-man"] {
+  object-position: 40% center;
 }
-
 
 .card-body {
   padding: 1.1rem 1.15rem 1.3rem;
@@ -269,14 +275,218 @@ card img[src*="iron-man"] {
   text-align: center;
 }
 
-.gallery {
+/* 6. Details page  */
+.profile {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+  grid-template-columns: minmax(0, 9fr) minmax(0, 7fr);
+  gap: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.portrait {
+  margin: 0;
+  border: 1px solid #c08a2e;
+  border-radius: 6px;
+  background-color: #f3ece0;
+  padding: 10px;
+}
+
+.portrait img {
+  border-radius: 3px;
+}
+
+.portrait figcaption {
+  padding-top: 0.6rem;
+  font-size: 0.85rem;
+  color: #63726f;
+  text-align: center;
+}
+
+.sheet {
+  background-color: #f3ece0;
+  color: #1c2a30;
+  border: 1px solid #c08a2e;
+  border-radius: 6px;
+  padding: 1.6rem 1.75rem;
+}
+
+.sheet h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: normal;
+  font-size: 1.6rem;
+  margin: 0 0 0.9rem;
+}
+
+.sheet p {
+  max-width: 66ch;
+}
+
+.sheet .stats {
+  font-size: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+.sheet ul {
+  margin: 0 0 1.4rem;
+  padding-left: 1.2rem;
+}
+
+.sheet li {
+  margin-bottom: 0.45rem;
+}
+
+.sheet li strong {
+  font-weight: 600;
+}
+
+.sheet code {
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.9em;
+  background-color: #e6ddcb;
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
   padding-bottom: 3.5rem;
 }
 
-/* 6. Footer  */
+/*  7. About page  */
+.about {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+  gap: 2.5rem;
+  padding-bottom: 3.5rem;
+  align-items: start;
+}
+
+.about .prose {
+  background-color: #f3ece0;
+  color: #1c2a30;
+  border: 1px solid #c08a2e;
+  border-radius: 6px;
+  padding: 1.75rem 2rem;
+}
+
+.about .prose h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: normal;
+  font-size: 1.5rem;
+  margin: 1.8rem 0 0.6rem;
+}
+
+.about .prose .lead-heading {
+  margin-top: 0;
+}
+
+.about .prose p {
+  max-width: 68ch;
+}
+
+.about .prose code {
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.9em;
+  background-color: #e6ddcb;
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+
+/* 8. Form page */
+.form-card {
+  background-color: #f3ece0;
+  color: #1c2a30;
+  border: 1px solid #c08a2e;
+  border-radius: 6px;
+  padding: 1.75rem 2rem 2rem;
+  max-width: 680px;
+  margin-bottom: 3.5rem;
+}
+
+.form-card fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 1.75rem;
+}
+
+.form-card legend {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+  padding: 0;
+  margin-bottom: 0.25rem;
+}
+
+.hint {
+  margin: 0 0 1.4rem;
+  font-size: 0.92rem;
+  color: #63726f;
+}
+
+.field {
+  margin-bottom: 1.1rem;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
+}
+
+.field input,
+.field select,
+.field textarea {
+  font: inherit;
+  width: 100%;
+  padding: 0.6rem 0.7rem;
+  color: #1c2a30;
+  background-color: #fbf8f2;
+  border: 1px solid #c9bfaa;
+  border-radius: 6px;
+}
+
+.field textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.field-hint {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  color: #63726f;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0 1.1rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  border-top: 1px solid #c08a2e;
+  padding-top: 1.4rem;
+}
+
+.actions .hint {
+  margin: 0;
+}
+
+.actions .btn-quiet {
+  color: #1c2a30;
+  border-color: #c9bfaa;
+}
+
+.actions .btn-quiet:hover {
+  background-color: #e6ddcb;
+}
+
+/*  9. Footer  */
 .footer {
   background-color: #102a31;
   border-top: 2px solid #c08a2e;
@@ -289,7 +499,7 @@ card img[src*="iron-man"] {
   margin: 0;
 }
 
-/*  7. Small screens */
+/*  10. Small screens */
 @media (max-width: 760px) {
   .page-head {
     padding-top: 2rem;
