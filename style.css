@@ -171,3 +171,101 @@ textarea:focus {
   font-size: 0.9rem;
   color: #9fb4b3;
 }
+
+/* ---- 5. Cards --------------------------------------------- */
+.card {
+  background-color: #f3ece0;
+  color: #1c2a30;
+  border: 1px solid #c08a2e;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-bottom: 1px solid #e0d6c2;
+}
+
+.card-body {
+  padding: 1.1rem 1.15rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: normal;
+  font-size: 1.45rem;
+  margin: 0;
+}
+
+.universe {
+  margin: 0.15rem 0 0.9rem;
+  font-size: 0.95rem;
+  color: #63726f;
+  font-style: italic;
+}
+
+.stats {
+  margin: 0;
+  padding-top: 0.85rem;
+  border-top: 1px solid #c08a2e;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.3rem 1rem;
+  font-size: 0.94rem;
+}
+
+.stats dt {
+  color: #63726f;
+}
+
+.stats dd {
+  margin: 0;
+  text-align: right;
+}
+
+.pips {
+  display: inline-flex;
+  gap: 4px;
+  justify-content: flex-end;
+}
+
+.pips span {
+  width: 13px;
+  height: 13px;
+  border: 1px solid #c08a2e;
+  border-radius: 2px;
+  display: block;
+}
+
+.pips span.on {
+  background-color: #c08a2e;
+}
+
+.blurb {
+  margin: 0.95rem 0 1.25rem;
+  font-size: 0.96rem;
+}
+
+.card .btn {
+  margin-top: auto;
+  text-align: center;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+  gap: 1.5rem;
+  padding-bottom: 3.5rem;
+}
