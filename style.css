@@ -1,5 +1,4 @@
-
-/* ---- 1. Base ---------------------------------------------- */
+/*  1. Base  */
 * {
   box-sizing: border-box;
 }
@@ -37,7 +36,7 @@ textarea:focus {
   padding: 0 1.25rem;
 }
 
-/* ---- 2. Navigation ---------------------------------------- */
+/*  2. Navigation  */
 .topbar {
   background-color: #102a31;
   border-bottom: 2px solid #c08a2e;
@@ -90,7 +89,7 @@ textarea:focus {
   border-bottom-color: #e0b45c;
 }
 
-/* ---- 3. Page header --------------------------------------- */
+/*  3. Page header  */
 .page-head {
   padding: 3rem 0 1.75rem;
 }
@@ -109,7 +108,7 @@ textarea:focus {
   color: #c3d2d1;
 }
 
-/* ---- 4. Search row ---------------------------------------- */
+/*  4. Search row */
 .finder {
   display: flex;
   flex-wrap: wrap;
@@ -172,7 +171,7 @@ textarea:focus {
   color: #9fb4b3;
 }
 
-/* ---- 5. Cards --------------------------------------------- */
+/*  5. Cards  */
 .card {
   background-color: #f3ece0;
   color: #1c2a30;
@@ -195,6 +194,12 @@ textarea:focus {
   object-fit: cover;
   border-bottom: 1px solid #e0d6c2;
 }
+
+/*Adjust iron man pic*/
+card img[src*="iron-man"] {
+  transform: 3px;
+}
+
 
 .card-body {
   padding: 1.1rem 1.15rem 1.3rem;
@@ -263,9 +268,40 @@ textarea:focus {
   margin-top: auto;
   text-align: center;
 }
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
   gap: 1.5rem;
   padding-bottom: 3.5rem;
+}
+
+/* 6. Footer  */
+.footer {
+  background-color: #102a31;
+  border-top: 2px solid #c08a2e;
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+  color: #9fb4b3;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/*  7. Small screens */
+@media (max-width: 760px) {
+  .page-head {
+    padding-top: 2rem;
+  }
+
+  .page-head h1 {
+    font-size: 2.1rem;
+  }
+
+  .profile,
+  .about {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
