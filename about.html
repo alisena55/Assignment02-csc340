@@ -1,11 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About | Character Gallery</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
+    <!-- Navigation: the same on all four pages -->
+    <header class="topbar">
+        <div class="wrap">
+            <a class="brand" href="index.html">Character <span>Gallery</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="detail.html">Details</a></li>
+                    <li><a class="here" href="about.html">About</a></li>
+                    <li><a href="new-character-form.html">Add a Character</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrap">
+
+        <div class="page-head">
+            <h1>About this site</h1>
+            <p>What it is, why these five characters, and how the thing was put together.</p>
+        </div>
+
+        <div class="about">
+
+            <figure class="portrait">
+                <img src="images/about-desk.jpg"
+                    alt="A laptop, a notebook of wireframe sketches and a mug on a wooden desk">
+                <figcaption>Where this got built, roughly.</figcaption>
+            </figure>
+
+            <div class="prose">
+                <h2 class="lead-heading">The idea</h2>
+                <p>This is a gallery of five fictional characters I have actually spent
+                    time with — not a list of the most powerful or most popular ones. Every
+                    entry is written the way you would write a trading card: a few hard
+                    facts, a rough power rating, and one honest line about why I picked the character.
+                </p>
+
+                <h2>Why these five</h2>
+                <ul>
+                    <li>Iron Man / Tony Stark — build yourself into the role. He starts with wealth, ego, and talent,
+                        but has
+                        to earn becoming a hero through suffering, responsibility, and engineering.</li>
+                    <li>Spider-Man / Peter Parker — the responsibility is handed to you. He gets extraordinary power
+                        incredibly young and spends his story learning how heavy that responsibility actually is.</li>
+                    <li>Jake Sully — reject the world you came from and choose another. His story is fundamentally about
+                        identity, belonging, culture, and love. He doesn't simply become a better soldier; he eventually
+                        rejects the values of his own side and chooses a completely different life.</li>
+                    <li>Ben 10 / Ben Tennyson — the childhood fantasy. This one is different. You don't necessarily
+                        watch
+                        Ben because he's some deeply philosophical hero. You watch because the idea of being a kid who
+                        can
+                        turn into aliens is freaking awesome. The Omnitrix is basically every kid's dream.</li>
+                    <li>Tom and Jerry — pure timeless entertainment. Almost no dialogue, no complicated mythology, no
+                        giant
+                        character arcs needed. The physical comedy works whether you're 5, 15, or 50. That's probably
+                        why it
+                        stuck with you.</li>
+                </ul>
+
+
+                <h2>Design choices</h2>
+                <p>The design looks like a collection of cards sitting on a table. I used a dark teal background so the
+                    cream-colored cards stand out and look more like real physical cards. Each card also has a
+                    brass-colored line around the edge to make the different pages feel connected. The character names
+                    use a serif font, while the facts and labels use a sans-serif font. This makes it easier to tell the
+                    difference between a character's name and their stats.
+                </p>
+                <p>The stats on each card are organized with the label on the left and the value on the right. This
+                    makes all five cards easy to scan and compare instead of making them look like five separate
+                    paragraphs. For the power level, I used five small squares instead of a number. Since the power
+                    rating is just a general judgment, the squares make more sense than using something exact like "8.4
+                    / 10."</p>
+
+                <h2>How it was built</h2>
+                <p>Plain HTML and one hand-written stylesheet. No frameworks, no JavaScript,
+                    no build step. The gallery uses CSS grid with
+                    <code>auto-fill</code>, so it reflows from three columns to one
+                    without a single media query doing the work. The one media query that
+                    does exist handles the two-column pages on small screens.
+                </p>
+
+                <h2>About me</h2>
+                <p>I am Ali, a junior computer science student at UNC Greensboro, based in
+                    Charlotte. Before CS I studied physics and math and spent a stretch
+                    shooting photography, which is probably why I care more about how a page
+                    is composed than the assignment strictly requires. I am heading toward
+                    backend Java work, so a static site with no server is refreshing.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="wrap">
+            <p>Built by Alisena Nasirali for CSC 372 — static HTML and CSS, no frameworks.</p>
+        </div>
+    </footer>
+
 </body>
+
 </html>
