@@ -1,11 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add a Character | Character Gallery</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
+    <!-- Navigation: the same on all four pages -->
+    <header class="topbar">
+        <div class="wrap">
+            <a class="brand" href="index.html">Character <span>Gallery</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="detail.html">Details</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a class="here" href="new-character-form.html">Add a Character</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrap">
+
+        <div class="page-head">
+            <h1>Add a character</h1>
+            <p>Fill in a card and it joins the gallery — once there is a server to send
+                it to. For now the form collects the fields and goes nowhere.</p>
+        </div>
+
+        <!-- No backend yet, so the action is left empty on purpose. -->
+        <form class="form-card" action="" method="post">
+
+            <fieldset>
+                <legend>Who is it?</legend>
+                <p class="hint">Name and universe are what the search bar will look at.</p>
+
+                <div class="row">
+                    <div class="field">
+                        <label for="name">Character name</label>
+                        <input type="text" id="name" name="name" placeholder="Ben Tennyson" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="universe">Universe</label>
+                        <input type="text" id="universe" name="universe" placeholder="Ben 10 — Cartoon Network"
+                            required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="field">
+                        <label for="role">Role</label>
+                        <input type="text" id="role" name="role" placeholder="Omnitrix bearer">
+                    </div>
+
+                    <div class="field">
+                        <label for="species">Species</label>
+                        <input type="text" id="species" name="species" placeholder="Human">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="power">Power level</label>
+                    <select id="power" name="power">
+                        <option value="1">1 — no powers to speak of</option>
+                        <option value="2">2 — capable</option>
+                        <option value="3" selected>3 — dangerous</option>
+                        <option value="4">4 — heavyweight</option>
+                        <option value="5">5 — rewrites the rules</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>The card</legend>
+
+                <div class="field">
+                    <label for="image">Image URL</label>
+                    <input type="url" id="image" name="image" placeholder="https://example.com/character.jpg">
+                    <small class="field-hint">Portrait images work best — the cards crop to 4:5.</small>
+                </div>
+
+                <div class="field">
+                    <label for="description">Short description</label>
+                    <textarea id="description" name="description"
+                        placeholder="One or two sentences. What makes this character worth a card?"></textarea>
+                    <small class="field-hint">Keep it under about 220 characters so the cards stay even.</small>
+                </div>
+            </fieldset>
+
+            <div class="actions">
+                <button class="btn" type="submit">Add character</button>
+                <button class="btn btn-quiet" type="reset">Clear the form</button>
+                <p class="hint">Nothing is saved yet — there is no server behind this page.</p>
+            </div>
+
+        </form>
+    </main>
+
+    <footer class="footer">
+        <div class="wrap">
+            <p>Built by Alisena Nasirali for CSC-340 — static HTML and CSS, no frameworks.</p>
+        </div>
+    </footer>
+
 </body>
+
 </html>

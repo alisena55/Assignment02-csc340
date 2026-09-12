@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Character Gallery | Home</title>
+    <title>Home | Character Gallery</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -28,13 +28,12 @@
     <main class="wrap">
 
         <div class="page-head">
-            <h1>My Top Five Favorite characters</h1>
+            <h1>My Top Five Favorite Characters</h1>
             <p>A small collection of the fictional characters I grew up on, written up
                 like trading cards. Pick any one to open its full profile.</p>
         </div>
 
-        <!-- Search + filter. No backend and no JavaScript yet, so nothing
-         happens -->
+        <!-- Search and filter. No backend and no JavaScript yet, so nothing happens. -->
         <form class="finder" action="index.html" method="get" role="search">
             <label class="visually-hidden" for="q">Search by name</label>
             <input type="search" id="q" name="q" placeholder="Search by name, e.g. Spider-Man">
@@ -49,7 +48,7 @@
             </select>
 
             <button class="btn" type="submit">Search</button>
-            <p class="note">Searching have no function yet </p>
+            <p class="note">Search has no function yet.</p>
         </form>
 
         <!-- Character cards -->
@@ -57,7 +56,7 @@
 
             <!-- CARD 1 -->
             <div class="card">
-                <img src="images/iron-man.jpg" alt="Iron Man in his red and gold armour">
+                <img class="crop-left" src="images/iron-man.jpg" alt="Iron Man in his red and gold armor">
                 <div class="card-body">
                     <h2>Iron Man</h2>
                     <p class="universe">Marvel Cinematic Universe</p>
@@ -67,7 +66,7 @@
                         <dt>Role</dt>
                         <dd>Founding Avenger</dd>
                         <dt>Species</dt>
-                        <dd>Human, armoured</dd>
+                        <dd>Human, armored</dd>
                         <dt>Power</dt>
                         <dd><span class="pips">
                                 <span class="on"></span><span class="on"></span><span class="on"></span><span
@@ -77,7 +76,7 @@
                     <p class="blurb">A weapons manufacturer who built his way out of a cave
                         and then spent the rest of his life trying to make up for the years
                         before it.</p>
-                    <a class="btn btn-quiet" href="details.html">View details</a>
+                    <a class="btn btn-quiet" href="detail.html">View details</a>
                 </div>
             </div>
 
@@ -100,9 +99,9 @@
                                     class="on"></span><span></span><span></span>
                             </span></dd>
                     </dl>
-                    <p class="blurb">A paralysed marine sent to Pandora to gather intelligence,
+                    <p class="blurb">A paralyzed marine sent to Pandora to gather intelligence,
                         who ended up choosing the people he was sent to study.</p>
-                    <a class="btn btn-quiet" href="details.html">View details</a>
+                    <a class="btn btn-quiet" href="detail.html">View details</a>
                 </div>
             </div>
 
@@ -116,7 +115,7 @@
                         <dt>Real name</dt>
                         <dd>Peter Parker</dd>
                         <dt>Role</dt>
-                        <dd>Neighbourhood hero</dd>
+                        <dd>Neighborhood hero</dd>
                         <dt>Species</dt>
                         <dd>Enhanced human</dd>
                         <dt>Power</dt>
@@ -127,7 +126,7 @@
                     </dl>
                     <p class="blurb">A high schooler with a spider bite, a homemade suit and
                         far more responsibility than anyone his age should be carrying.</p>
-                    <a class="btn btn-quiet" href="details.html">View details</a>
+                    <a class="btn btn-quiet" href="detail.html">View details</a>
                 </div>
             </div>
 
@@ -150,9 +149,10 @@
                                     class="on"></span><span class="on"></span>
                             </span></dd>
                     </dl>
-                    <p class="blurb">A kid on a summer road trip finds an alien watch and
-                        gains ten different bodies.</p>
-                    <a class="btn btn-quiet" href="details.html">View details</a>
+                    <p class="blurb">A kid on a summer road trip finds a strange alien watch and suddenly gains the
+                        ability to transform into ten different alien bodies. He uses these powers to fight bad guys.
+                    </p>
+                    <a class="btn btn-quiet" href="detail.html">View details</a>
                 </div>
             </div>
 
@@ -174,10 +174,9 @@
                                 <span class="on"></span><span class="on"></span><span
                                     class="on"></span><span></span><span></span>
                             </span></dd>
-                    </dl>
-                    <p class="blurb">Eighty years of chase scenes with almost no dialogue,
-                        and somehow still readable in any language on earth.</p>
-                    <a class="btn btn-quiet" href="details.html">View details</a>
+                    </dl>A classic cartoon about a cat and mouse who are always trying to outsmart each other. Their
+                    simple rivalry turns into endless funny situations that made the show memorable for generations.</p>
+                    <a class="btn btn-quiet" href="detail.html">View details</a>
                 </div>
             </div>
 
@@ -186,7 +185,7 @@
 
     <footer class="footer">
         <div class="wrap">
-            <p>Built by Alisena Nasirali for CSC 372 — static HTML and CSS, no frameworks.</p>
+            <p>Built by Alisena Nasirali for CSC-340 — static HTML and CSS, no frameworks.</p>
         </div>
     </footer>
 
